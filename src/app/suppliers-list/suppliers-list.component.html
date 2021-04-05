@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-suppliers-edit></app-suppliers-edit>
+    <hr>
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let supplier of suppliers; let i = index"
+        (click)="onEditItem(i)"
+      >
+        <b>Supplier id</b>: {{ supplier.id }} - <b>Name:</b> {{ supplier.name }} | <b>Products</b>: {{ supplier.products }} | <b>User ID</b>: {{ supplier.user }}
+      </a>
+    </ul>
+  </div>
+</div>
