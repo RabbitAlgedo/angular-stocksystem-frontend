@@ -1,11 +1,13 @@
 import { Product } from '../shared/product.model';
 import { Subject } from 'rxjs';
+import { SuppliersListService } from '../suppliers-list/suppliers-list.service';
 
 export class ProductsListService {
   productsChanged = new Subject<Product[]>();
   startedEditing = new Subject<number>();
+  test = SuppliersListService;
   private products: Product[] = [
-    new Product('Product name 1', 5, 10, 15),
+    new Product('Product name 1', 5, 15, 15),
     new Product('Product name 2', 10, 11, 19),
     new Product('Product name 3', 8, 3, 8),
   ];
